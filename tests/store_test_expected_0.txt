@@ -1,0 +1,14 @@
+Running store_client tests...
+
+-------------------------------------------------
+Testing refill_from_stockroom...
+	Testing specific cases...
+	Testing a variety of cases (only shows first failure)...
+
+Finished testing refill_from_stockroom. Score: 2/2
+-------------------------------------------------
+Finished testing store_client!
+Summary:
+	refill_from_stockroom   	2/2
+
+Total Score: 2/2

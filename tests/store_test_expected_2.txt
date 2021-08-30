@@ -1,0 +1,14 @@
+Running store_client tests...
+
+-------------------------------------------------
+Testing empty_section_with_id...
+	Testing specific cases...
+	Testing a variety of cases (only shows first failure)...
+
+Finished testing empty_section_with_id. Score: 2/2
+-------------------------------------------------
+Finished testing store_client!
+Summary:
+	empty_section_with_id   	2/2
+
+Total Score: 2/2

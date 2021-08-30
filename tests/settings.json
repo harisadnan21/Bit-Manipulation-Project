@@ -1,0 +1,30 @@
+{
+  "mode": "exe",
+  "penalty_exitcode_nonzero": 0.75,
+  "test_suites": {
+    "aisle_test": {
+      "tests": [
+        { "desc": "get_section",  "args": ["-f", "get_section"],  "points":4 },
+        { "desc": "get_id",  "args": ["-f", "get_id"],  "points":4 },
+        { "desc": "get_spaces",  "args": ["-f", "get_spaces"],  "points":4 },
+        { "desc": "set_section",  "args": ["-f", "set_section"],  "points":4 },
+        { "desc": "set_id",  "args": ["-f", "set_id"],  "points":4 },
+        { "desc": "set_spaces",  "args": ["-f", "set_spaces"],  "points":5 },
+        { "desc": "toggle_space",  "args": ["-f", "toggle_space"],  "points":6 },
+        { "desc": "num_items",  "args": ["-f", "num_items"],  "points":5 },
+        { "desc": "add_items",  "args": ["-f", "add_items"],  "points":8 },
+        { "desc": "remove_items",  "args": ["-f", "remove_items"],  "points":8 },
+        { "desc": "rotate_items_left",  "args": ["-f", "rotate_items_left"],  "points":8 },
+        { "desc": "rotate_items_right",  "args": ["-f", "rotate_items_right"],  "points":8 }
+      ]
+    },
+    "store_test": {
+      "tests": [
+        { "desc": "refill_from_stockroom",  "args": ["-f", "refill_from_stockroom"],  "points":8 },
+        { "desc": "fulfill_order",  "args": ["-f", "fulfill_order"],  "points":8 },
+        { "desc": "empty_section_with_id",  "args": ["-f", "empty_section_with_id"],  "points":8 },
+        { "desc": "section_with_most_items",  "args": ["-f", "section_with_most_items"],  "points":8 }
+      ]
+    }
+  }
+}

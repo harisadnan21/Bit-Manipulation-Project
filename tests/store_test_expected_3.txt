@@ -1,0 +1,14 @@
+Running store_client tests...
+
+-------------------------------------------------
+Testing section_with_most_items...
+	Testing specific cases...
+	Testing a variety of cases (only shows first failure)...
+
+Finished testing section_with_most_items. Score: 2/2
+-------------------------------------------------
+Finished testing store_client!
+Summary:
+	section_with_most_items 	2/2
+
+Total Score: 2/2

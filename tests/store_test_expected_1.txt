@@ -1,0 +1,14 @@
+Running store_client tests...
+
+-------------------------------------------------
+Testing fulfill_order...
+	Testing specific cases...
+	Testing a variety of cases (only shows first failure)...
+
+Finished testing fulfill_order. Score: 2/2
+-------------------------------------------------
+Finished testing store_client!
+Summary:
+	fulfill_order           	2/2
+
+Total Score: 2/2
