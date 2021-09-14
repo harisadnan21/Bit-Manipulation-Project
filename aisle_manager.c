@@ -57,17 +57,17 @@
 // Mask for extracting a section from the least significant bits of an aisle.
 // (aisle & SECTION_MASK) should preserve a section's worth of bits at the lower
 // end of the aisle and set all other bits to 0
-#define SECTION_MASK 0x000000000000FFFF
+#define SECTION_MASK 0xFFFF
 
 // Mask for extracting the spaces bits from a section
 // (section & SPACES_MASK) should preserve all the spaces bits in a section
 // and set all non-spaces bits to 0.
-#define SPACES_MASK 0x00000000000003FF
+#define SPACES_MASK 0x03FF
 
 // Mask for extracting the ID bits from a section
 // (section & ID_MASK) should preserve all the id bits in a section
 // and set all non-id bits to 0.
-#define ID_MASK 0x000000000000FC00
+#define ID_MASK 0xFC00
 
 // Given a an aisle and a section index.
 //
@@ -124,7 +124,18 @@ unsigned short get_spaces(unsigned long aisle, int index) {
 // Alternative solution w/shifting
 unsigned long set_section(unsigned long aisle, int index, unsigned short new_section) {
   // TODO: Implement this function
-  return ((~(SECTION_MASK << (index * 16)) & aisle) | (((long)new_section) << (index * 16)));
+  unsigned long number_with_middle_zeros = ~((unsigned long)SECTION_MASK << (index * 16)) ;
+  
+  unsigned long n2 = number_with_middle_zeros & aisle;
+  unsigned long number_with_section_only= ((unsigned long)new_section<<(index *16));
+  
+
+  unsigned long ret = n2 | number_with_section_only;
+  
+  //unsigned long ret = 0;
+  //ret = ret | get_section(aisle, index)
+  return  ret;
+  
 }
 
 // Given an aisle, a section index, and a short representing a 
@@ -138,10 +149,10 @@ unsigned long set_section(unsigned long aisle, int index, unsigned short new_sec
 // Can assume the index is a valid index (0-3 inclusive)
 unsigned long set_id(unsigned long aisle, int index, unsigned short new_id) {
 // TODO: Implement this function
-  if(new_id >> 6 != 0){
+  if(new_id > 63){
     return aisle;
   }
-  return ((~(ID_MASK << (index * 16)) & aisle) | (((long)new_id) << (index * 16 + 10)));
+  return ((~((unsigned long)ID_MASK << (index * 16)) & aisle) | (((long)new_id) << (index * 16 + 10)));
 }
 
 // Given an aisle, a section index, and a short representing a 
@@ -158,7 +169,7 @@ unsigned long set_spaces(unsigned long aisle, int index, unsigned short new_spac
   if(new_spaces >> 10 != 0){
     return aisle;
   }
-  return ((~(SPACES_MASK << (index * 16)) & aisle) | (((long)new_spaces) << (index * 16)));
+  return ((~((unsigned long)SPACES_MASK << (index * 16)) & aisle) | (((long)new_spaces) << (index * 16)));
 }
 
 // Given an aisle and a section index.
@@ -190,6 +201,7 @@ unsigned short num_items(unsigned long aisle, int index) {
 // Can assume the index is a valid index (0-3 inclusive)
 unsigned long add_items(unsigned long aisle, int index, int n) { 
 // TODO: Implement this function
+  
   return 0;
 }
 
