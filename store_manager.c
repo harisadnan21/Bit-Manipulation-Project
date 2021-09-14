@@ -18,6 +18,8 @@
 // Number of items in the stockroom (2^6 different id combinations)
 #define NUM_ITEMS 64
 
+#define NUM_SPACES 10
+
 // Global array of aisles in this store. Each unsigned long in the array
 // represents one aisle.
 unsigned long aisles[NUM_AISLES];
@@ -36,6 +38,20 @@ int stockroom[NUM_ITEMS];
  */
 void refill_from_stockroom() {
   // TODO: implement this function
+  for(int i = 0; i < NUM_AISLES; i++){
+    for(int j = 0; j < SECTIONS_PER_AISLE; j++){
+      unsigned short id = get_id(aisles[i], j);
+      int sItems = stockroom[id];
+      if(sItems > 0 && num_items(aisles[i], j) < NUM_SPACES){
+        add_items(aisles[i], j, sItems);
+        if(sItems > NUM_SPACES - num_items(aisles[i], j)){
+          stockroom[id] = stockroom[id] - (NUM_SPACES - num_items(aisles[i], j));
+        } else {
+          stockroom[id] = 0;
+        }
+      }
+    }
+  }
 }
 
 /* Remove at most num items from sections with the given item id, starting with
