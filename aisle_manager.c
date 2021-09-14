@@ -201,8 +201,21 @@ unsigned short num_items(unsigned long aisle, int index) {
 // Can assume the index is a valid index (0-3 inclusive)
 unsigned long add_items(unsigned long aisle, int index, int n) { 
 // TODO: Implement this function
+  //Check if num_items>n
+  int zero_count= 0;
+  unsigned short spaces = get_spaces(aisle, index);
   
-  return 0;
+  for(int i = 0; i < 10; i++){
+    unsigned short lsbit = spaces & (0x0001<<i);
+    if (lsbit == 0 || zero_count < n){
+      spaces = spaces | (0x0001<<i);
+      zero_count++;
+    }
+    
+  }
+  
+
+  return set_spaces(aisle, index, spaces);
 }
 
 // Given an aisle, a section index, and the desired
