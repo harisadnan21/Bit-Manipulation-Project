@@ -207,7 +207,7 @@ unsigned long add_items(unsigned long aisle, int index, int n) {
   
   for(int i = 0; i < 10; i++){
     unsigned short lsbit = spaces & (0x0001<<i);
-    if (lsbit == 0 || zero_count < n){
+    if (lsbit == 0 && zero_count < n){
       spaces = spaces | (0x0001<<i);
       zero_count++;
     }
@@ -231,7 +231,21 @@ unsigned long add_items(unsigned long aisle, int index, int n) {
 // Can assume the index is a valid index (0-3 inclusive)
 unsigned long remove_items(unsigned long aisle, int index, int n) {
 // TODO: Implement this function
+  int one_count= 0;
+  unsigned short spaces = get_spaces(aisle, index);
+  
+  /*for(int i = 0; i < 10; i++){
+    unsigned short lsbit = spaces & (0x0001<<i);
+    if (lsbit == 1 && zero_count < n){
+      spaces = spaces | (0x0001<<i);
+      one_count++;
+    }
+    
+  }
+  */
+
   return 0;
+  
 }
 
 // Given an aisle, a section index, and a space index.
@@ -246,7 +260,22 @@ unsigned long remove_items(unsigned long aisle, int index, int n) {
 // Can assume the spaces index is a valid index (0-9 inclusive)
 unsigned long toggle_space(unsigned long aisle, int section_index, int space_index) {
 // TODO: Implement this function
-  return 0;
+  unsigned short spaces = get_spaces(aisle, section_index);
+  for(int i = 0; i < 10; i++){
+    unsigned short g = 0x0001 << i;
+    if (i == space_index){
+      if (((spaces & g)>>i)== 1){
+        spaces = ((~g) & spaces);
+      }
+      else{
+        spaces = (g | spaces);
+
+      }
+    }
+
+  }
+
+  return set_spaces(aisle, section_index, spaces);
 }
 
 // Given an aisle, a section index, and a number
@@ -263,7 +292,16 @@ unsigned long toggle_space(unsigned long aisle, int section_index, int space_ind
 // (hint: think about what rotating by a value >= NUM_SPACES is equivalent to)
 unsigned long rotate_items_left(unsigned long aisle, int index, int n) {
 // TODO: Implement this function
-  return 0;
+  unsigned short spaces = get_spaces(aisle,index);
+  if (n < 10){
+    spaces = ((spaces<<n) & SPACES_MASK) | ((spaces>> (10 - n)) & SPACES_MASK);
+  }
+  else{
+    int rem = n % 10;
+    spaces = ((spaces<<rem) & SPACES_MASK) | ((spaces>> (10 - rem)) & SPACES_MASK);
+
+  }
+  return set_spaces(aisle, index, spaces);
 }
 
 // Given an aisle, a section index, and a number
@@ -282,6 +320,16 @@ unsigned long rotate_items_left(unsigned long aisle, int index, int n) {
 // (hint: think about what rotating by a value >= NUM_SPACES is equivalent to)
 unsigned long rotate_items_right(unsigned long aisle, int index, int n) {
 // TODO: Implement this function
+  unsigned short spaces = get_spaces(aisle,index);
+  if (n < 10){
+    spaces = ((spaces>>n) & SPACES_MASK) | ((spaces<< (10 - n)) & SPACES_MASK);
+  }
+  else{
+    int rem = n % 10;
+    spaces = ((spaces>>rem) & SPACES_MASK) | ((spaces<< (10 - rem)) & SPACES_MASK);
+
+  }
+  return set_spaces(aisle, index, spaces);
   return 0;
 }
 
