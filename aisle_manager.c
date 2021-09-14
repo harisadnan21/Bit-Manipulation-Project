@@ -231,21 +231,22 @@ unsigned long add_items(unsigned long aisle, int index, int n) {
 // Can assume the index is a valid index (0-3 inclusive)
 unsigned long remove_items(unsigned long aisle, int index, int n) {
 // TODO: Implement this function
-  int one_count= 0;
+
+  int count= 0;
   unsigned short spaces = get_spaces(aisle, index);
   
-  /*for(int i = 0; i < 10; i++){
+  for(int i = 0; i < 10; i++){
     unsigned short lsbit = spaces & (0x0001<<i);
-    if (lsbit == 1 && zero_count < n){
-      spaces = spaces | (0x0001<<i);
-      one_count++;
+    if (lsbit != 0 && count < n){
+      spaces = spaces ^ (0x0001<<i);
+      count++;
     }
     
   }
-  */
-
-  return 0;
   
+
+  return set_spaces(aisle, index, spaces);
+
 }
 
 // Given an aisle, a section index, and a space index.
