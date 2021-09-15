@@ -1,0 +1,14 @@
+Running aisle_manager tests...
+
+-------------------------------------------------
+Testing toggle_space...
+	Testing specific cases...
+	Testing a variety of cases (only shows first failure)...
+
+Finished testing toggle_space. Score: 2/2
+-------------------------------------------------
+Finished testing aisle_manager!
+Summary:
+	toggle_space    	2/2
+
+Total Score: 2/2

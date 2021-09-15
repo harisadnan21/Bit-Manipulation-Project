@@ -1,0 +1,14 @@
+Running aisle_manager tests...
+
+-------------------------------------------------
+Testing add_items...
+	Testing specific cases...
+	Testing a variety of cases (only shows first failure)...
+
+Finished testing add_items. Score: 3/3
+-------------------------------------------------
+Finished testing aisle_manager!
+Summary:
+	add_items       	3/3
+
+Total Score: 3/3

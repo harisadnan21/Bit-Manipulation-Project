@@ -1,0 +1,14 @@
+Running aisle_manager tests...
+
+-------------------------------------------------
+Testing remove_items...
+	Testing specific cases...
+	Testing a variety of cases (only shows first failure)...
+
+Finished testing remove_items. Score: 1/1
+-------------------------------------------------
+Finished testing aisle_manager!
+Summary:
+	remove_items    	1/1
+
+Total Score: 1/1

@@ -1,0 +1,68 @@
+Running store_client tests...
+
+-------------------------------------------------
+Testing fulfill_order...
+	Testing specific cases...
+		error: aisle value incorrect: aisles[4]: actual 0x080308000cff0cff, expected 0x080008000cff0cff
+		    params: id=0x0002, num=5
+		    aisles[4] before: 0x080308000cff0cff
+		    All other aisles were set to 0.
+		    stockroom[2] before: 0
+		    All other stockrooms were set to 0.
+		error: aisle value incorrect: aisles[4]: actual 0x0803080f0cff0cff, expected 0x080208000cff0cff
+		    params: id=0x0002, num=5
+		    aisles[4] before: 0x0803080f0cff0cff
+		    All other aisles were set to 0.
+		    stockroom[2] before: 0
+		    All other stockrooms were set to 0.
+		error: aisle value incorrect: aisles[4]: actual 0x080308000cff0cff, expected 0x080008000cff0cff
+		    params: id=0x0002, num=5
+		    aisles[4] before: 0x080308000cff0cff
+		    All other aisles were set to 0.
+		    stockroom[2] before: 2
+		    All other stockrooms were set to 0.
+		error: aisle value incorrect: aisles[4]: actual 0x080308000cff0cff, expected 0x080008000cff0cff
+		    params: id=0x0002, num=5
+		    aisles[4] before: 0x080308000cff0cff
+		    All other aisles were set to 0.
+		    stockroom[2] before: 5
+		    All other stockrooms were set to 0.
+	Testing a variety of cases (only shows first failure)...
+		error: aisle value incorrect: aisles[1]: actual 0x74b0dc5119495cff, expected 0x74b0dc5118005cff
+		    params: id=0x0006, num=1804289383
+		Aisles before function call:
+		    aisles[0] (addr 0x55ac9b0c6380): 0x643c986966334873
+		    aisles[1] (addr 0x55ac9b0c6388): 0x74b0dc5119495cff
+		    aisles[2] (addr 0x55ac9b0c6390): 0x2ae8944a625558ec
+		    aisles[3] (addr 0x55ac9b0c6398): 0x238e1f2946e87ccd
+		    aisles[4] (addr 0x55ac9b0c63a0): 0x3d1b58ba507ed7ab
+		    aisles[5] (addr 0x55ac9b0c63a8): 0x2eb141f241b71efb
+		    aisles[6] (addr 0x55ac9b0c63b0): 0x79e2a9e37545e146
+		    aisles[7] (addr 0x55ac9b0c63b8): 0x515f007c5bd062c2
+		    aisles[8] (addr 0x55ac9b0c63c0): 0x122008544db127f8
+		    aisles[9] (addr 0x55ac9b0c63c8): 0x0216231b1f16e9e8
+		Stockroom before function call:
+		    stockroom[0]: 294702567		    stockroom[1]: 1726956429		    stockroom[2]: 336465782		    stockroom[3]: 861021530
+		    stockroom[4]: 278722862		    stockroom[5]: 233665123		    stockroom[6]: 2145174067		    stockroom[7]: 468703135
+		    stockroom[8]: 1101513929		    stockroom[9]: 1801979802		    stockroom[10]: 1315634022		    stockroom[11]: 635723058
+		    stockroom[12]: 1369133069		    stockroom[13]: 1125898167		    stockroom[14]: 1059961393		    stockroom[15]: 2089018456
+		    stockroom[16]: 628175011		    stockroom[17]: 1656478042		    stockroom[18]: 1131176229		    stockroom[19]: 1653377373
+		    stockroom[20]: 859484421		    stockroom[21]: 1914544919		    stockroom[22]: 608413784		    stockroom[23]: 756898537
+		    stockroom[24]: 1734575198		    stockroom[25]: 1973594324		    stockroom[26]: 149798315		    stockroom[27]: 2038664370
+		    stockroom[28]: 1129566413		    stockroom[29]: 184803526		    stockroom[30]: 412776091		    stockroom[31]: 1424268980
+		    stockroom[32]: 1911759956		    stockroom[33]: 749241873		    stockroom[34]: 137806862		    stockroom[35]: 42999170
+		    stockroom[36]: 982906996		    stockroom[37]: 135497281		    stockroom[38]: 511702305		    stockroom[39]: 2084420925
+		    stockroom[40]: 1937477084		    stockroom[41]: 1827336327		    stockroom[42]: 572660336		    stockroom[43]: 1159126505
+		    stockroom[44]: 805750846		    stockroom[45]: 1632621729		    stockroom[46]: 1100661313		    stockroom[47]: 1433925857
+		    stockroom[48]: 1141616124		    stockroom[49]: 84353895		    stockroom[50]: 939819582		    stockroom[51]: 2001100545
+		    stockroom[52]: 1998898814		    stockroom[53]: 1548233367		    stockroom[54]: 610515434		    stockroom[55]: 1585990364
+		    stockroom[56]: 1374344043		    stockroom[57]: 760313750		    stockroom[58]: 1477171087		    stockroom[59]: 356426808
+		    stockroom[60]: 945117276		    stockroom[61]: 1889947178		    stockroom[62]: 1780695788		    stockroom[63]: 709393584
+
+Finished testing fulfill_order. Score: 0/2
+-------------------------------------------------
+Finished testing store_client!
+Summary:
+	fulfill_order           	0/2
+
+Total Score: 0/2
