@@ -3,47 +3,12 @@ Running store_client tests...
 -------------------------------------------------
 Testing refill_from_stockroom...
 	Testing specific cases...
-		error: stockroom value incorrect: stockroom[3]: actual 10, expected 6
-		    aisles[4] before: 0x080108000cff0cff
-		    All other aisles were set to 0.
-		    stockroom[2] before: 4
-		    stockroom[3] before: 10
-		    All other stockrooms were set to 0.
 	Testing a variety of cases (only shows first failure)...
-		error: stockroom value incorrect: stockroom[0]: actual 35005211, expected 35005206
-		Aisles before function call:
-		    aisles[0] (addr 0x55fa31d73380): 0x6b8b4567327b23c6
-		    aisles[1] (addr 0x55fa31d73388): 0x643c986966334873
-		    aisles[2] (addr 0x55fa31d73390): 0x74b0dc5119495cff
-		    aisles[3] (addr 0x55fa31d73398): 0x2ae8944a625558ec
-		    aisles[4] (addr 0x55fa31d733a0): 0x238e1f2946e87ccd
-		    aisles[5] (addr 0x55fa31d733a8): 0x3d1b58ba507ed7ab
-		    aisles[6] (addr 0x55fa31d733b0): 0x2eb141f241b71efb
-		    aisles[7] (addr 0x55fa31d733b8): 0x79e2a9e37545e146
-		    aisles[8] (addr 0x55fa31d733c0): 0x515f007c5bd062c2
-		    aisles[9] (addr 0x55fa31d733c8): 0x122008544db127f8
-		Stockroom before function call:
-		    stockroom[0]: 35005211		    stockroom[1]: 521595368		    stockroom[2]: 294702567		    stockroom[3]: 1726956429
-		    stockroom[4]: 336465782		    stockroom[5]: 861021530		    stockroom[6]: 278722862		    stockroom[7]: 233665123
-		    stockroom[8]: 2145174067		    stockroom[9]: 468703135		    stockroom[10]: 1101513929		    stockroom[11]: 1801979802
-		    stockroom[12]: 1315634022		    stockroom[13]: 635723058		    stockroom[14]: 1369133069		    stockroom[15]: 1125898167
-		    stockroom[16]: 1059961393		    stockroom[17]: 2089018456		    stockroom[18]: 628175011		    stockroom[19]: 1656478042
-		    stockroom[20]: 1131176229		    stockroom[21]: 1653377373		    stockroom[22]: 859484421		    stockroom[23]: 1914544919
-		    stockroom[24]: 608413784		    stockroom[25]: 756898537		    stockroom[26]: 1734575198		    stockroom[27]: 1973594324
-		    stockroom[28]: 149798315		    stockroom[29]: 2038664370		    stockroom[30]: 1129566413		    stockroom[31]: 184803526
-		    stockroom[32]: 412776091		    stockroom[33]: 1424268980		    stockroom[34]: 1911759956		    stockroom[35]: 749241873
-		    stockroom[36]: 137806862		    stockroom[37]: 42999170		    stockroom[38]: 982906996		    stockroom[39]: 135497281
-		    stockroom[40]: 511702305		    stockroom[41]: 2084420925		    stockroom[42]: 1937477084		    stockroom[43]: 1827336327
-		    stockroom[44]: 572660336		    stockroom[45]: 1159126505		    stockroom[46]: 805750846		    stockroom[47]: 1632621729
-		    stockroom[48]: 1100661313		    stockroom[49]: 1433925857		    stockroom[50]: 1141616124		    stockroom[51]: 84353895
-		    stockroom[52]: 939819582		    stockroom[53]: 2001100545		    stockroom[54]: 1998898814		    stockroom[55]: 1548233367
-		    stockroom[56]: 610515434		    stockroom[57]: 1585990364		    stockroom[58]: 1374344043		    stockroom[59]: 760313750
-		    stockroom[60]: 1477171087		    stockroom[61]: 356426808		    stockroom[62]: 945117276		    stockroom[63]: 1889947178
 
-Finished testing refill_from_stockroom. Score: 0/2
+Finished testing refill_from_stockroom. Score: 2/2
 -------------------------------------------------
 Finished testing store_client!
 Summary:
-	refill_from_stockroom   	0/2
+	refill_from_stockroom   	2/2
 
-Total Score: 0/2
+Total Score: 2/2
