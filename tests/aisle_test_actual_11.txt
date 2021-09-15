@@ -1,0 +1,14 @@
+Running aisle_manager tests...
+
+-------------------------------------------------
+Testing rotate_items_right...
+	Testing specific cases...
+	Testing a variety of cases (only shows first failure)...
+
+Finished testing rotate_items_right. Score: 1/1
+-------------------------------------------------
+Finished testing aisle_manager!
+Summary:
+	rotate_items_right	1/1
+
+Total Score: 1/1

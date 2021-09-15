@@ -1,0 +1,14 @@
+Running aisle_manager tests...
+
+-------------------------------------------------
+Testing set_id...
+	Testing specific cases...
+	Testing a variety of cases (only shows first failure)...
+
+Finished testing set_id. Score: 2/2
+-------------------------------------------------
+Finished testing aisle_manager!
+Summary:
+	set_id          	2/2
+
+Total Score: 2/2

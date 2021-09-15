@@ -1,0 +1,14 @@
+Running aisle_manager tests...
+
+-------------------------------------------------
+Testing get_spaces...
+	Testing specific cases...
+	Testing a variety of cases (only shows first failure)...
+
+Finished testing get_spaces. Score: 1/1
+-------------------------------------------------
+Finished testing aisle_manager!
+Summary:
+	get_spaces      	1/1
+
+Total Score: 1/1
